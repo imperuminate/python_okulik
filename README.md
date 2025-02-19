@@ -38,6 +38,9 @@
 
 `git push`
 
+`git clone git@github.com:imperuminate/python_okulik.git` - to downloan github project localy. You'll nean to setup SSH key
+
+
 
 # 2. `Python`
 - выучить основы языка пайтона
