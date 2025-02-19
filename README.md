@@ -40,6 +40,7 @@
 
 `git clone git@github.com:imperuminate/python_okulik.git` - to downloan github project localy. You'll nean to setup SSH key
 
+Setup [SSH key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 
 # 2. `Python`
