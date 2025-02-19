@@ -1,22 +1,10 @@
 1. [Git](git.md)
 2. [Python](python.md)
-
-# 3. `Pytest`
-- научиться использовать для написания и организации тестов
-# 4. `Playwright`
-- научиться использовать для написания и организации тестов
-# 5. `SQL`
-- выучить команды и синтаксис
-- решать задачи и практиковать sql  
-# 6. `API`
-- научиться использовать, понять как работать с либами
-# 7. tools: 
-`dotenv`, `defaultdict`, `faker`, `csv`
-# 8. `CI/CD`:
-- научиться настраивать свой проект в CI/CD
-
-8.1 `GitHub Actions`\
-8.2 `Jenkins`
-# 9 `Docker`
-# 10 `Selenium` 
-- понять основы, попробовать по работать, для того чтобы было что сказать на собесе. Понять разницу между Selenium и Playwright
+3. [Pytest](pytest.md)
+4. [Playwright](playwright.md)
+5. [SQL](sql.md)
+6. [API](api.md)
+7. [Tools](tools.md)
+8. [CI/CD](cicd.md)
+9. [Docker](docker.md)
+10. [Selenium](selenium.md)
