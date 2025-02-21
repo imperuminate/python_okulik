@@ -6,3 +6,6 @@
 ---
 ---
 ---
+
+- [Basics 1](../python_jupiter_notes/lesson_1/python_1_basics.ipynb)
+- 
