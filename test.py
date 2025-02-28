@@ -1,5 +1,5 @@
 while True:
-    user_input = input('Enter something: ')
+    user_input = input('Enter something:')
     if user_input == 'exit':
         break
     elif user_input == 'skip':
