@@ -1,10 +1,15 @@
+import os
 import mysql.connector as mysql
 from python_jupiter_notes.Lesson_16 import creds
+import dotenv
+
+
+dotenv.load_dotenv()
 
 
 db = mysql.connect(
-    user=creds.user,
-    passwd=creds.passwd,
+    user=os.getenv("DB_USER"),
+    passwd=os.getenv("DB_PASSW"),
     host=creds.host,
     port=creds.port,
     database=creds.database,
