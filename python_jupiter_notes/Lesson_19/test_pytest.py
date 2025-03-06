@@ -12,10 +12,8 @@ def new_post_id():
     requests.post(
         "https://jsonplaceholder.typicode.com/posts", json=body, headers=headers
     ).json()
-    print("fixture start")
     yield 1
     requests.delete("https://jsonplaceholder.typicode.com/posts/1")
-    print("fixture finished")
 
 @pytest.fixture(scope="session")
 def hello():
