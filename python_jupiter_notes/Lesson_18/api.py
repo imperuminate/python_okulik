@@ -34,7 +34,7 @@ def add_new_post():
             "body": bbody, 
             "userId": buser_id}
     headers = {"Content-type": "application/json; charset=UTF-8"}
-    responce = requests.post("https://jsonplaceholder.typicode.com/posts", json=body, headers=headers).json()
+    responce = requests.post("§/posts", json=body, headers=headers).json()
     return responce["userId"]
 
 
