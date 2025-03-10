@@ -19,69 +19,69 @@ def driver():
 
 
 
-# def test_new_tab_switch(driver):
-#     driver.get("https://www.qa-practice.com/elements/new_tab/link")
-#     new_tab_button = driver.find_element(By.ID, 'new-page-link')
-#     new_tab_button.click()
-#     tabs = driver.window_handles
-#     print(tabs)
-#     driver.switch_to.window(tabs[1])
-#     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'result-text')))
-#     new_tab_text = driver.find_element(By.CLASS_NAME, 'result-text')
-#     assert new_tab_text.text == 'I am a new page in a new tab'
-#     driver.close()
-#     driver.switch_to.window(tabs[0])
-#     assert new_tab_button.is_enabled()
+def test_new_tab_switch(driver):
+    driver.get("https://www.qa-practice.com/elements/new_tab/link")
+    new_tab_button = driver.find_element(By.ID, 'new-page-link')
+    new_tab_button.click()
+    tabs = driver.window_handles
+    print(tabs)
+    driver.switch_to.window(tabs[1])
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, 'result-text')))
+    new_tab_text = driver.find_element(By.CLASS_NAME, 'result-text')
+    assert new_tab_text.text == 'I am a new page in a new tab'
+    driver.close()
+    driver.switch_to.window(tabs[0])
+    assert new_tab_button.is_enabled()
 
 
-# def test_iframe(driver):
-#     driver.get("https://www.qa-practice.com/elements/iframe/iframe_page")
-#     iframe = driver.find_element(By.CLASS_NAME, 'embed-responsive-item')
-#     driver.switch_to.frame(iframe)
-#     burger_menu = driver.find_element(By.CLASS_NAME, 'navbar-toggler-icon')
-#     burger_menu.click()
-#     sleep(1)
-#     driver.switch_to.default_content()
-#     home_button = driver.find_element(By.XPATH, '//a[@href="/"]')
-#     home_button.click()
-#     print(home_button.text)
-#     sleep(5)
+def test_iframe(driver):
+    driver.get("https://www.qa-practice.com/elements/iframe/iframe_page")
+    iframe = driver.find_element(By.CLASS_NAME, 'embed-responsive-item')
+    driver.switch_to.frame(iframe)
+    burger_menu = driver.find_element(By.CLASS_NAME, 'navbar-toggler-icon')
+    burger_menu.click()
+    sleep(1)
+    driver.switch_to.default_content()
+    home_button = driver.find_element(By.XPATH, '//a[@href="/"]')
+    home_button.click()
+    print(home_button.text)
+    sleep(5)
 
 
-# def test_dropdown_menu(driver):
-#     driver.get('https://magento.softwaretestingboard.com/')
-#     women = driver.find_element(By.ID, 'ui-id-4')
-#     tops = driver.find_element(By.ID, 'ui-id-9')
-#     jacket = driver.find_element(By.ID, 'ui-id-11')
-#     # ActionChains(driver).move_to_element(women).move_to_element(tops).click(jacket).perform()
-#     actions = ActionChains(driver)
-#     actions.move_to_element(women)
-#     actions.move_to_element(tops)
-#     actions.click(jacket)
-#     actions.perform()
-#     actions.double_click(women)
-#     actions.context_click(women)
-#     sleep(5)
+def test_dropdown_menu(driver):
+    driver.get('https://magento.softwaretestingboard.com/')
+    women = driver.find_element(By.ID, 'ui-id-4')
+    tops = driver.find_element(By.ID, 'ui-id-9')
+    jacket = driver.find_element(By.ID, 'ui-id-11')
+    # ActionChains(driver).move_to_element(women).move_to_element(tops).click(jacket).perform()
+    actions = ActionChains(driver)
+    actions.move_to_element(women)
+    actions.move_to_element(tops)
+    actions.click(jacket)
+    actions.perform()
+    actions.double_click(women)
+    actions.context_click(women)
+    sleep(5)
 
 
-# def test_draf_and_drop(driver):
-#     driver.get('https://www.qa-practice.com/elements/dragndrop/boxes')
-#     box = driver.find_element(By.ID, 'rect-draggable')
-#     area_for_box = driver.find_element(By.ID, 'rect-droppable')
-#     actions = ActionChains(driver)
-#     actions.drag_and_drop(box, area_for_box).perform()
-#     # actions.click_and_hold(box)
-#     # actions.move_to_element(area_for_box)
-#     # actions.release()
-#     # actions.perform()
-#     sleep(4)
+def test_draf_and_drop(driver):
+    driver.get('https://www.qa-practice.com/elements/dragndrop/boxes')
+    box = driver.find_element(By.ID, 'rect-draggable')
+    area_for_box = driver.find_element(By.ID, 'rect-droppable')
+    actions = ActionChains(driver)
+    actions.drag_and_drop(box, area_for_box).perform()
+    # actions.click_and_hold(box)
+    # actions.move_to_element(area_for_box)
+    # actions.release()
+    # actions.perform()
+    sleep(4)
 
 
-# def test_open_in_new_tab(driver):
-#     driver.get('https://www.qa-practice.com/elements/dragndrop/boxes')
-#     link = driver.find_element(By.LINK_TEXT, 'Homepage')
-#     ActionChains(driver).key_down(Keys.COMMAND).click(link).key_up(Keys.COMMAND).perform() 
-#     sleep(3)
+def test_open_in_new_tab(driver):
+    driver.get('https://www.qa-practice.com/elements/dragndrop/boxes')
+    link = driver.find_element(By.LINK_TEXT, 'Homepage')
+    ActionChains(driver).key_down(Keys.COMMAND).click(link).key_up(Keys.COMMAND).perform() 
+    sleep(3)
 
 
 def test_alerts(driver):
@@ -93,3 +93,24 @@ def test_alerts(driver):
     sleep(1)
     alert.accept()
     sleep(3)
+
+def test_scrol_to_bottom(driver):
+    driver.get('https://magento.softwaretestingboard.com/')
+    driver.execute_script('window.scrollTo(0, document.body.scrollHeight);')
+   #driver.execute_script('window.scrollTo(0, 500);')
+    sleep(4)
+
+def test_scrol_to_element(driver):
+    driver.get('https://the-internet.herokuapp.com/')
+    link = driver.find_element(By.LINK_TEXT, 'JQuery UI Menus')
+    driver.execute_script('arguments[0].scrollIntoView();', link)
+    sleep(2)
+    link.click()
+
+def test_upload_file(driver):
+    driver.get('https://the-internet.herokuapp.com/upload')
+    upload_button = driver.find_element(By.ID, 'file-upload')
+    submit_button = driver.find_element(By.ID, 'file-submit')
+    upload_button.send_keys('/Users/imperuminate/Desktop/download.webp')
+    submit_button.click()
+    sleep(5)
